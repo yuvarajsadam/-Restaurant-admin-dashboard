@@ -19,20 +19,9 @@ cd ../frontend
 npm install
 ```
 
-## 🔐 Environment Variables
 
-### Backend (`.env`)
-```env
-MONGODB_URI=mongodb+srv://<user>:<password>@cluster.mongodb.net/RestaurantDB
-PORT=5000
-NODE_ENV=development
-```
 
-### Frontend (`.env`)
-```env
-VITE_API_URL=http://localhost:5000/api
-```
-
+ 
 ## 🎯 Running the Application
 
 ### 1. Start the Backend Server
@@ -54,19 +43,7 @@ cd frontend
 npm run dev
 ```
 
-## 🗄️ Database Seeding
-
-The seed script (`backend/seed.js`) populates the database with:
-
-**Menu Items (Indian Cuisine):**
-- **Appetizers:** Paneer Tikka, Chicken 65, Veg Samosa, Gobi Manchurian
-- **Main Courses:** Butter Chicken, Paneer Butter Masala, Dal Makhani, Chicken Biryani, Garlic Naan
-- **Desserts:** Gulab Jamun, Rasmalai, Gajar Ka Halwa
-- **Beverages:** Mango Lassi, Masala Chai, Fresh Lime Soda
-
-**Sample Orders:**
-- Orders distributed across **Pending**, **Preparing**, **Ready**, **Delivered**, and **Cancelled** statuses.
-- Real-time pricing in **₹ (Rupees)**.
+ 
 
 ## 📡 API Documentation
 
@@ -84,27 +61,6 @@ The seed script (`backend/seed.js`) populates the database with:
 - `PATCH /api/orders/:id/status` - Update order stage (Pending -> Preparing -> Ready -> Delivered)
 - `GET /api/orders/top-selling` - Analytics for best performing dishes
 
-## 🎨 Screenshots
+ 
 
-### Menu Management (Indian Selection)
-![Menu Management](screenshots/menu-management.png)
-
-### Orders Dashboard (Different Stages)
-![Orders Dashboard](screenshots/orders-dashboard.png)
-
-## 🧩 Challenges & Solutions
-
-### Challenge 1: Search Performance
-**Problem:** Frequent API calls while typing in search box.  
-**Solution:** Custom `useDebounce` hook implemented to delay search until 300ms after user stops typing.
-
-### Challenge 2: Order Lifecycle Management
-**Problem:** Managing state transitions across multiple stages (Pending to Delivered).  
-**Solution:** Backend schema enforces enum validation, while Frontend provides intuitive dropdowns for status updates with instant feedback.
-
-### Challenge 3: Responsive UI for Complex Tables
-**Problem:** Displaying order details on mobile devices.  
-**Solution:** Implemented expandable cards that stack vertically on small screens instead of horizontal tables.
-
-## 👨‍💻 Author
-Built for Eatoes Technical Assessment.
+ 

@@ -1,4 +1,4 @@
-const API_URL =  'https://restaurant-admin-dashboard-g28s.onrender.com' || 'http://localhost:5000/api';
+const API_URL =  https://restaurant-admin-dashboard-g28s.onrender.com || http://localhost:5000/api;
 
 // Helper function for API calls
 const apiCall = async (endpoint, options = {}) => {
